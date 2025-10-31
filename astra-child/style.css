@@ -1,0 +1,189 @@
+/*
+Theme Name: Astra Child
+Template: astra
+Version: 1.0.0
+Text Domain: astra-child
+Description: Thème enfant basé sur Astra (footer personnalisé).
+*/
+
+/* Ton CSS perso ici au besoin */
+
+:root {
+  --primary: #44f381;
+  --bg-footer: #07110a;
+  --text-footer: #eaf9ef;
+  --muted: rgba(234, 249, 239, 0.75);
+  --radius: 10px;
+  --gap: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+  background: var(--bg-footer);
+  font-family: 'Roboto', sans-serif;
+}
+
+.site-content {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Footer */
+
+.site-footer.footer--light {
+  --bg-footer: #ffffff;
+  --text-footer: #052009;
+  --muted: rgba(5, 32, 9, 0.7);
+}
+
+.site-footer.ast-container {
+  background: var(--bg-footer);
+  color: var(--text-footer);
+  padding: 28px 16px;
+  border-top: 3px solid rgba(125, 209, 129, 0.08);
+  position: relative;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  width: 150%;
+}
+
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 220px 220px;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--primary);
+}
+.footer-col p,
+.footer-col ul,
+.footer-col .copy {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+.footer-col a:hover {
+  color: var(--text-footer);
+  transform: translateY(-2px);
+}
+
+.footer-col .copy {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-grid > * {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeInUp 420ms ease forwards;
+}
+.footer-grid > *:nth-child(1) {
+  animation-delay: 80ms;
+}
+.footer-grid > *:nth-child(2) {
+  animation-delay: 160ms;
+}
+.footer-grid > *:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+
+/* Header base */
+.site-header {
+  background-color: #0b120d; /* couleur sombre proche de ton image */
+  color: #ffffff;
+  padding: 45px 20px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Container flex */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo-img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* Menu principal */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #7dd181; /* couleur principale */
+}
+
+/* Social icons simple placeholders */
+.social-icons a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #7dd181;
+  transform: translateY(-2px);
+}
+/* Header */
+
+/* BDODY */
+.wp-block-cover
+{
+  background: linear-gradient(180deg, rgba(7, 17, 10, 0.6) 0%, rgba(7, 17, 10, 0.6) 100%);
+}
+
+.has-white-color
+{
+  color: #00ff55;
+}
